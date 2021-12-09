@@ -1,1 +1,17 @@
 /*Maak hier jouw CSS!*/
+body {
+}
+
+.container {
+    background-color: lightgoldenrodyellow;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 50px 190px 100px auto 50px;
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+}
+
+.grid-item {
+    background-color: indianred;
+    border: 2px solid maroon;
+}
