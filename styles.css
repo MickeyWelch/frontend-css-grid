@@ -1,17 +1,41 @@
 /*Maak hier jouw CSS!*/
-body {
-}
-
 .container {
     background-color: lightgoldenrodyellow;
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 50px 190px 100px auto 50px;
-    grid-column-gap: 16px;
-    grid-row-gap: 16px;
+    grid-gap: 16px;
+    grid-template-areas:
+    "area-a area-c area-c"
+    "area-b area-c area-c"
+    "area-b area-d area-e"
+    "area-b area-d ."
+    "area-f area-f area-f";
 }
 
 .grid-item {
-    background-color: indianred;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: 2px solid maroon;
+    background-color: indianred;
+}
+
+#nav {
+    grid-area: area-a;
+}
+#main {
+    grid-area: area-b;
+}
+#header{
+    grid-area: area-c;
+}
+#D {
+    grid-area: area-d;
+}
+#E {
+    grid-area: area-e;
+}
+#footer {
+    grid-area: area-f;
 }
