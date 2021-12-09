@@ -1,16 +1,20 @@
 /*Maak hier jouw CSS!*/
+
+/* mobile grid*/
 .container {
     background-color: lightgoldenrodyellow;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 50px 190px 100px auto 50px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px auto 50px 50px 50px 50px 50px;
     grid-gap: 16px;
     grid-template-areas:
-    "area-a area-c area-c"
-    "area-b area-c area-c"
-    "area-b area-d area-e"
-    "area-b area-d ."
-    "area-f area-f area-f";
+    "area-a"
+    "area-b"
+    "area-c"
+    "area-d"
+    "area-e"
+    "."
+    "area-f";
 }
 
 .grid-item {
@@ -38,4 +42,18 @@
 }
 #footer {
     grid-area: area-f;
+}
+
+@media screen and (min-width: 576px) {
+    /* desktop grid */
+    .container {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 50px 190px 100px auto 50px;
+        grid-template-areas:
+    "area-a area-c area-c"
+    "area-b area-c area-c"
+    "area-b area-d area-e"
+    "area-b area-d ."
+    "area-f area-f area-f";
+    }
 }
